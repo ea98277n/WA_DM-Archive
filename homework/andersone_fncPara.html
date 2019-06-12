@@ -1,0 +1,43 @@
+<html>
+<head><title>Functions With Parameters</title>
+<style>
+body {
+	background-color: #111;
+	color:#FFF;
+	font-size:18pt;
+	font-family: arial, verdana, times;
+	letter-spacing: -2px;
+}
+
+b {
+    color: #CBE86B;
+}
+
+h1 {
+    color: #89EDE2;
+    letter-spacing: -4px;
+    border-bottom: 3px dashed #F2E9E1;
+}
+</style>
+<script>
+function milesPerGallon() {
+    var total = Math.ceil(milesdriven/gallonsConsumed);
+        document.write("My car gets about <b>" + total + "</b> miles per gallon of gas.");
+}
+</script>
+</head>
+<body>
+<h1>Gallons and Miles</h1>
+<script>
+var milesdriven= parseFloat(prompt("Input the total number of miles diven?", "325"));
+    document.write("I have driven <b>" + milesdriven + "</b> miles.<br>");
+
+var gallonsConsumed= parseFloat(prompt("Enter the number of gallons consumed", "15"));
+    document.write("I expended <b>" + gallonsConsumed + "</b> gallons of gas.<br>");
+
+if ((milesdriven>0) && (gallonsConsumed>0)) {
+    milesPerGallon();
+}
+</script>
+</body>
+</html>

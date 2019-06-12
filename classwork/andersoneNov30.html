@@ -1,0 +1,41 @@
+<html>
+<head><title>Arrays</title>
+<style>
+
+body {
+    background: #333;
+    font-size: 20pt;
+    color: #87CA06;
+    font-family: arial, verdana, times;
+}
+
+</style>
+</head>
+<body>
+<script>
+
+var quotes= ["Just do it","Eat Fresh","I'm lovin' it","Have it your way"];
+
+var saying = quotes[Math.floor((Math.random()*4))];
+
+document.write(saying);
+
+for (i=0;i<quotes.length;i++)
+{
+	document.write("<br>My quote is " + quotes[i]);
+	if (quotes[i]==3)
+		document.write("<br>My double quote is " + quotes[i]);
+}
+
+var sports = [];
+var j=0;
+while (j<3)
+{
+	sports[j]=prompt("What sport do you play?");
+	document.write("<br>I play " + sports[j]);
+	j++;
+}
+
+</script>
+</body>
+</html>

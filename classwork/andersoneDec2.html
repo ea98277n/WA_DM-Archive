@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Multiple Arrays</title>
+<style type="text/css">
+    body {
+        background-color: #EF3432;
+        color: #FFDE24;
+        font-size: 23pt;
+		text-align: center;
+    }
+    
+    img {
+        width: 50%;
+    }
+</style>
+</head>
+<body>
+	<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Denny%27s_logo.svg/1280px-Denny%27s_logo.svg.png">
+	<h1>America's Diner Always Open</h1>
+
+	<script type="text/javascript">
+		var foodList = ["Soda","Oreo Shake","Sirloin Steak","Lava Cake"];
+		var foodQty = [];
+		var foodCost = [];
+		var total = 0;
+
+		for(var i=0; i<foodList.length; i++){
+			foodQty[i] = parseInt(prompt("How many "+foodList[i]+"s did you get?"));
+			foodCost[i] = parseFloat(prompt("How much did your "+foodList[i]+" cost?"));
+
+			document.write(foodQty[i] + " " + foodList[i] + " @ $" + foodCost[i] + "<br>");
+			total += foodQty[i]*foodCost[i];
+		}
+
+		document.write("<br>The total bill is $"+total);
+	</script>
+</body>
+
+</html>

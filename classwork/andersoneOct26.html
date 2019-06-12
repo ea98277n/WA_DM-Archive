@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				background-color: #003366;
+				color: #ddd;
+				font-size: 24pt;
+			}
+			
+			img {
+				height: 300px;
+				width: 450px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var rHours = parseInt(prompt("How many hours to complete?","3"));
+			var rMins = parseInt(prompt("How many minutes to complete?","59"));
+			var totalMins = (rHours*60)+rMins;
+			
+			document.write("Your race you will be running for " + totalMins + " minutes.<br>");
+			
+			if (totalMins<=210) {
+				document.write("You are in wave 1<br><img src='http://www.reilycenter.com/wp-content/uploads/running.jpg'");
+				document.write("<br><br>You should be a pro!");
+			}
+			
+			//multiple conditions use && for AND, use || for OR
+			
+			if ((totalMins<=270) && (totalMins>210)) {
+				document.write("You are in wave 2<br><img src='http://i2.cdn.turner.com/cnn/dam/assets/140403115247-long-distance-running-story-top.jpg'>");
+				document.write("<br>Average runner");
+			}
+			
+			if ((totalMins<=330) && (totalMins>270)) {
+				document.write("You are in wave 3<br><img src='http://www.active.com/Assets/Running/460/beach-running-460.jpg'>")
+				document.write("<br>Practice some more");
+			}
+			
+			if ((totalMins>330) && (totalMins<480)) {
+				document.write("You are in wave 4 <br><img src='https://threadless-media.s3.amazonaws.com/submissions/523852-4398b03e31d62a029aa2b53f4b017cb7.jpg'>")
+			}
+			
+			if ((totalMins<=210) || (totalMins>=480)) {
+				document.write("<br>That entry is not valid, try again");
+			}
+			
+			document.write("<br>Your race will finish in " + rHours + " hours, and " + rMins + " minutes.<br>")
+		</script>
+	</body>
+</html>

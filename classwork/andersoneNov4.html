@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Functions with parameters</title>
+<style>
+body {
+	background-color: black;
+	color: yellow;
+	font-size: 18pt;
+}
+p {
+	color: aqua;
+	font-size: 24pt;
+}
+</style>
+<script>
+	function drink(drinkCost) {
+		var drinkName = prompt("What is the name of your drink?","Coffee");
+		document.write("I had " + drinkName + " to drink and it cost $" + drinkCost + ".<br>");
+		drinkCost = drinkCost + .5;
+		return drinkCost;
+	}
+	
+	function meal(foodCost) {
+		var foodName = prompt("What did you get for a meal?","Sandwich");
+		document.write("I had " + foodName + " to eat and it cost $" + foodCost + ".<br>");
+		foodCost = 1.1*foodCost;
+		return foodCost;
+	}
+	
+	function dessert(dessertCost) {
+		var dessertName = prompt("What did you get for dessert?","Cheesecake");
+		document.write("I had a " + dessertName + " for dessert and it cost $" + dessertCost + ".<br>");
+		return dessertCost;
+	}
+</script>
+</head>
+<body>
+<script>
+var runningTotal = 0;
+
+var liquid = parseFloat(prompt("How much was your drink?","1.39"));
+if (liquid>0)
+runningTotal = drink(liquid) + runningTotal;
+
+var food = parseFloat(prompt("How much was your meal?","15.00"));
+if (food>0)
+runningTotal = meal(food) + runningTotal;
+
+var snack = parseFloat(prompt("How much was dessert","3.79"));
+if (snack>0)
+runningTotal = dessert(snack) + runningTotal;
+
+document.write("<p>The total bill is $" + runningTotal + "</p>")
+</script>
+</body>
+</html>

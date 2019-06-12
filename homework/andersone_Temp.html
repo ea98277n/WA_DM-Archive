@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				background-color: #89AB97;
+				color: #331A00;
+				font-size: 24pt;
+				font-family: helvetica, arial, times;
+				letter-spacing: -2px;
+			}
+			
+			small {
+				font-size: 18px;
+				letter-spacing: -1px;
+			}
+		</style>
+	</head>
+	<body>
+		<center><small>by Eric Anderson</small></center>
+		<script type="text/javascript">
+			var centigrade = parseInt(prompt("How many degrees centigrade"));
+			var fahrenheit = centigrade*9/5+32;
+			
+			document.write("<br><h3>Temperature Conversion Tool</h3>The temperature you entered is " + centigrade + "&deg; centigrade.<br>");
+			document.write("The temperature converted to fahrenheit is " + fahrenheit + "&deg;.")
+		</script>
+	</body>
+</html>

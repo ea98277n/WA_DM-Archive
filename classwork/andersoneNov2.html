@@ -1,0 +1,65 @@
+
+<html>
+<head>
+	<title>Functions</title>
+	<style>
+	body
+	{
+		background-color: gray;
+		color: white;
+	}
+	
+	img
+	{
+		height: 300px;
+		width: 300px;
+	}
+	</style>
+	<script>//these script tags will only run when called
+		function cartoon(){
+			document.write("You can go see a cartoon");
+			//document.write("");
+			document.write("<br/> <img src='http://24.media.tumblr.com/tumblr_lzambxXknh1qczibyo1_500.gif' /> <br/> <img src='http://motherhoodlater.com/wp-content/uploads/2015/03/babyoilphoto.jpg' /> <br/>");
+		}
+		function pgRating(){
+			document.write("You can see a PG movie");
+			document.write("<br/> <img src='https://media.giphy.com/media/oDDs67mo76beM/giphy.gif' /> <br/> <img src='http://news.xinhuanet.com/english/photo/2012-10/09/131893967_271n.jpg' />");
+		}
+		function pg13Rating(){
+			document.write("You can see a PG-13 movie");
+			document.write("<br/> <img src='https://media.giphy.com/media/3rEi755PzPwqY/giphy.gif' /> <br/> <img src='https://www.pmap.co/c/531a4c90/images/stories/teenager_girl_stressed_headache_istock.jpg' />");
+		}
+		function anyRating(){
+			document.write("You can see any movie");
+			document.write("<br/> <img src='http://strategylab.ca/wp-content/uploads/2013/07/bridesmaids-the-movie.jpg' /> <br/> <img src='http://stonybrookfellowship.com/wordpress/wp-content/uploads/2012/06/young-adults.jpg' />");
+		}
+	</script>
+</head>
+<body>
+	<h1>Today is all about functions</h1>
+	<script>
+		var age = parseInt(prompt("How old are you?", "15"));
+		document.write("You are "+age+" years old<br/>");
+		
+		if(age <= 5){
+			cartoon();
+		}
+		
+		else if(age <= 12){
+			pgRating();
+		}
+		
+		else if(age < 18){
+			pg13Rating();
+		}
+		
+		else if (age >= 18){
+			anyRating();
+		}
+		
+		else{
+			document.write("Please enter a valid entry");
+		}
+	</script>
+</body>
+</html>

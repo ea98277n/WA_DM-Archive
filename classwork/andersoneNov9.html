@@ -1,0 +1,40 @@
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color:black;
+            color:yellow;
+        }
+        
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My looping webpage</h1>
+    <script>
+        var i;
+        for (i=0;i<=10;i++) {
+            document.write("<img src='https://lh4.ggpht.com/mVbCJ3gCwV0u61IkkJt5AN522yI6MITS1v2eyI8rQcRiERZAxA2fkmosNCxn781gkeg=w300'><br>");
+            if ((i>=3) && (i<7))
+                document.write("The i in the loop is " + i + "<br>")
+        }
+        
+        var j;
+        for (j=0;j<5;j++) {
+            document.write("For this line, j=" + j + "<br>");
+        }
+        
+        var k;
+        for (k=10;k>0;k--) {
+            document.write("Inside the k for loop<br>")
+        }
+        
+        var b;
+        for (b=1;b<7;b++) {
+            document.write("<h" + b + ">This is heading size " + b + "</h" + b + ">")
+        }
+    </script>
+</body>

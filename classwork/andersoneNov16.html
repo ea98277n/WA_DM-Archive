@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color: #FFF;
+                font-weight: bold;
+            }
+            
+            h1 {
+                font-family: georgia, arial, times;
+                color: #FCCC0A;
+            }
+            
+            img {
+                height: 100px;
+                width: 100px;
+            }
+            .center {
+                margin: auto;
+                width: 40%;
+                padding: 10px;
+                min-height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+    <div class=center><center>
+    <script>
+        
+        var i=parseInt(prompt("Pick a number",""));
+        
+        if ((i>=1) && (i<=10))
+        {
+            for (;i<=10;i++) {
+                document.write("This is my " + i);
+                if (i==1)
+                    document.write("st time in the loop<br>");
+                else if (i==2)
+                    document.write("nd time in the loop<br>");
+                else if (i==3)
+                    document.write("rd time in the loop<br>");
+                else
+                    document.write("th time in the loop<br>");
+            }
+        }
+        
+        else
+            document.write("Please enter a number between 1-10");
+        
+        var j=parseInt(prompt("Pick a number",""));
+        
+        do {
+            document.write("The " + j + " time in my DO loop<br>");
+            j=j+1; //j++ j=+1
+        } while (j<=10)
+        
+        var k=parseInt(prompt("Pick a number",""));
+        
+        while (k<=10) {
+            document.write("The " + k + " time in my WHILE loop<br>");
+            k=k+2;
+        }
+        /*
+        
+        var trainTime=parseInt(prompt("What hour are you checking for?",""));
+
+        document.write("<img src='http://images.huffingtonpost.com/2015-11-05-1446690413-9531066-Q_Train_logo.png'><br><h1>The Q train schedule for " + trainTime + ":00</h1>");
+
+        for (i=0;i<60;i=i+8) {
+            if (i<10)
+                document.write(trainTime + ":0" + i + "<br>");
+            else
+                document.write(trainTime + ":" + i + "<br>");
+        }
+        */
+    </script>
+    </center>
+    </div>
+    </body>
+</html>

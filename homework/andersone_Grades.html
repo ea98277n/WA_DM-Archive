@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Grades</title>
+        <style type="text/css">
+            body {
+                background-color: #222;
+                color: #FDF5E6;
+                font-family: arial, times;
+                letter-spacing: -1px;
+                font-size: 20px;
+                overflow: hidden;
+                text-shadow: 0px 2px 1px rgba(0,0,0,0.4),
+                0px 6px 10px rgba(0,0,0,0.1),
+                0px 14px 18px rgba(0,0,0,0.1);
+            }
+            
+            img {
+                width: 24px;
+                height: 24px;
+                margin-bottom: -4px;
+            }
+            
+            hr {
+                margin-left: -10px;
+                margin-right: -11px;
+            }
+            
+            .header {
+                border-bottom: 10px solid #464E5D;
+                background-color: #4A4233;
+                background-image: url(http://i.imgur.com/V9tx6t8.png);
+                padding: 40px 20px 30px 20px;
+                font-size: 36px;
+                margin: -10px -25px 10px -10px;
+                font-weight: bold;
+            }
+            
+            .bottom {
+                background-image: url(http://i.imgur.com/V9tx6t8.png) !important;
+                position: absolute;
+                right: 28%;
+                bottom: 0; 
+                left: 28%;
+                overflow: hidden;
+                background: #333;
+                padding: 50px 0px 50px 20px;
+                border-top: 10px solid #464E5D;
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+            
+            .container {
+                margin: -10px 28% 0% 28%;
+                background: #C3CFD6;
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow: hidden;
+                height: 150%;
+                box-shadow: 0px 0px 8px #000;
+            }
+            
+            .entity {
+                background-color: #96ABB7;
+                margin: -20px -20px 0px -20px;
+                padding: 10px 20px 0px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="header">Class Grades</div>
+        <hr style="box-shadow: 0px 0px 0px transparent; margin-top: -10px">
+    	<div class="entity">
+    	<script type="text/javascript">
+    	function grades(){
+    		var studentName = ["Student A","Student B","Student C","Student D"];
+    		var studentGrade = [];
+    		var avg = 0;
+    
+    		for(var i=0; i<studentName.length; i++){
+    			studentGrade[i] = parseFloat(prompt("What was "+studentName[i]+"'s score?"));
+
+    
+    			document.write(studentName[i] + " received a " + studentGrade[i] + " as their score. ");
+
+    			
+    			if (studentGrade[i] >= 90 && studentGrade[i] <= 100){
+    			    var A = document.write("The student received an <font color='#A4C639'>A</font>. <img src='http://i.imgur.com/Xs68Dk9.png'><br><hr>");
+    			} else if (studentGrade[i] >= 80 && studentGrade[i] <= 89) {
+    			    var B = document.write("The student received a <font color='#C7BD2B'>B</font>. <img src='http://i.imgur.com/mYbXF1P.png'><br><hr>");
+    			} else if (studentGrade[i] >= 70 && studentGrade[i] <= 79) {
+    			    var C = document.write("The student received a <font color='#C9881D'>C</font>. <img src='http://i.imgur.com/aJu4aFJ.png'><br><hr>");
+    			} else if (studentGrade[i] >= 60 && studentGrade[i] <= 69) {
+    			    var D = document.write("The student received a <font color='#CA490F'>D</font>. <img src='http://i.imgur.com/atwAJDQ.png'><br><hr>");
+    			} else if (studentGrade[i] >= 0 && studentGrade[i] <= 59) {
+    			    var F = document.write("The student received an <font color='#CC0000'>F</font>. <img src='http://i.imgur.com/uu484Ua.png'><br><hr>");
+    			} else {
+    			    document.write("<font color='#C2C2C2'>Invalid</font> <img src='http://i.imgur.com/fZsaS7z.png'><br><hr>");
+    			}
+                
+    			avg += (studentGrade[i] / 4);
+    		}
+    
+    		document.write("<div class='bottom'>The class average is " + avg + "</div>");
+    	}
+    	
+    	grades();
+    	</script>
+    	</div>
+    	</div>
+    </body>
+</html>

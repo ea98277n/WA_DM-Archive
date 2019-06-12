@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Student Status and IF</title>
+		<style type="text/css">
+			body {
+				background-color: #6E6565;
+				color: #7CAA96;
+				font-size: 24px;
+			}
+			
+			img {
+				height: 350px;
+				width: 350px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Your registration status</h1>
+		<script type="text/javascript">
+			var numCredits = parseInt(prompt("How many credits are you registered for?","12"));
+			document.write("You are taking " + numCredits + " credits.<br>")
+			
+			if (numCredits>=24) {
+				document.write("You are not allowed to take that many credits. Try again.")
+			}
+			
+			if (numCredits>=12) {
+				document.write("You are a full-time student.<br><img src='https://studentaidbc.ca/sites/all/files/summary-images/full-time.jpg'>")
+			}
+			
+			else if (numCredits==0) {
+				document.write("You are not enrolled in any classes this semester.<br><img src='http://eduboard.com/blog/wp-content/uploads/2013/02/Perfect-Part-Time-Jobs-for-Your-Resume.png'>")
+			}
+			
+			else if (numCredits<12) {
+				document.write("You are a part-time student<br><img src='https://psychologybenefits.files.wordpress.com/2013/08/blog-student-resource-guide.jpg'")
+			}
+			
+//*			else if ()
+//*			document.write("That is not a valid number");
+//*			}
+			
+			document.write("<p></p>");
+			
+			var letterGrade = prompt("What is your class average in letter grade format","A");
+			
+			switch (letterGrade) {
+				case 'A':
+				case 'a':
+					document.write("You have a 4.0 GPA");
+					break;
+				case 'B':
+				case 'b':
+					document.write("You have a 3.0 GPA");
+					break;
+				case 'C':
+				case 'c':
+					document.write("You have a 2.0 GPA");
+					break;
+				case 'D':
+				case 'd':
+					document.write("You have a 1.0 GPA");
+					break;
+				case 'F':
+				case 'f':
+					document.write("You have a 0.0 GPA");
+					break;
+				default:
+					document.write("That is not a valid letter grade");
+			}
+		</script>
+	</body>
+</html>
